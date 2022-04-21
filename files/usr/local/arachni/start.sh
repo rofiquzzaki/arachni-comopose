@@ -9,7 +9,7 @@ writtable="
     arachni-ui-web/config/component_cache
     arachni-ui-web/db
     arachni-ui-web/tmp
-    logs
+    /usr/local/arachni/logs
     home
 "
 
