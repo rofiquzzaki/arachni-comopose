@@ -30,7 +30,8 @@ RUN apt-get -y install \
     libxrandr-dev \
     libgbm-dev \
     libxkbcommon-dev \
-    libpango1.0-dev
+    libpango1.0-dev \ 
+    libnss3
 
 RUN mkdir /var/run/sshd && \
     mkdir -p /var/log/supervisor && \
