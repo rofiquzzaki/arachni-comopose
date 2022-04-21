@@ -31,7 +31,8 @@ RUN apt-get -y install \
     libgbm-dev \
     libxkbcommon-dev \
     libpango1.0-dev \ 
-    libnss3
+    libnss3 \
+    libasound2
 
 RUN mkdir /var/run/sshd && \
     mkdir -p /var/log/supervisor && \
