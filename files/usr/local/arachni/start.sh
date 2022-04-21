@@ -3,7 +3,7 @@
 echo "docker start version :${ARACHNI_VERSION}"
 source "/usr/local/arachni/bin/readlink_f.sh"
 
-env_root="/usr/local/arachni/system"
+env_root="/usr/local/arachni/.system"
 
 writtable="
     arachni-ui-web/config/component_cache
@@ -45,17 +45,17 @@ if [[ $? -ne 0 ]] ; then
 
 fi
 
-export RUBY_VERSION; RUBY_VERSION='ruby-2.2.3'
+export RUBY_VERSION; RUBY_VERSION='ruby-2.7.5'
 export GEM_HOME; GEM_HOME="$env_root/gems"
 export GEM_PATH; GEM_PATH="$env_root/gems"
 export MY_RUBY_HOME; MY_RUBY_HOME="$env_root/usr/lib/ruby"
-export RUBYLIB; RUBYLIB=$MY_RUBY_HOME:$MY_RUBY_HOME/site_ruby/2.2.0:$MY_RUBY_HOME/2.2.0:$MY_RUBY_HOME/2.2.0/x86_64-linux:$MY_RUBY_HOME/site_ruby/2.2.0/x86_64-linux
+export RUBYLIB; RUBYLIB=$MY_RUBY_HOME:$MY_RUBY_HOME/site_ruby/2.7.0:$MY_RUBY_HOME/2.7.0:$MY_RUBY_HOME/2.7.0/x86_64-linux:$MY_RUBY_HOME/site_ruby/2.7.0/x86_64-linux
 export IRBRC; IRBRC="$env_root/usr/lib/ruby/.irbrc"
 
 export RAILS_ENV=production
 
-export ARACHNI_FRAMEWORK_LOGDIR="$env_root/logs/framework"
-export ARACHNI_WEBUI_LOGDIR="$env_root/logs/webui"
+export ARACHNI_FRAMEWORK_LOGDIR="/usr/local/arachni/logs/framework"
+export ARACHNI_WEBUI_LOGDIR="/usr/local/arachni/logs/webui"
 
 export HOME="$env_root/home/arachni"
 
