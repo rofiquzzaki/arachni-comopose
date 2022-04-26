@@ -48,6 +48,6 @@ RUN wget https://github.com/Arachni/arachni/releases/download/v1.6.1/${ARACHNI_V
     rm -rf *.tar.gz
 
 COPY "$PWD"/files /
-EXPOSE 22 7331 9292
+EXPOSE 22 7331 9292 8888
 
 CMD entrypoint.sh
