@@ -58,4 +58,4 @@ export ARACHNI_WEBUI_LOGDIR="/usr/local/arachni/logs/webui"
 
 export HOME="$env_root/home/arachni"
 
-exec ruby $env_root/arachni-ui-web/bin/arachni_rpcd --address 0.0.0.0 --port 8888 --port-range 8000-20000
+exec ruby $env_root/arachni-ui-web/bin/arachni_rpcd --address 0.0.0.0 --port 8888 --port-range 8888-8899
