@@ -1,7 +1,7 @@
 version: '3'
 services:
   arachni:
-    build: .
+    build: 
       context: .
       shm_size: '4gb'
     command: bash -c "sleep 10 && entrypoint.sh"
