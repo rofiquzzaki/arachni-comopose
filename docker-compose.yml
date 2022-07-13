@@ -2,6 +2,8 @@ version: '3'
 services:
   arachni:
     build: .
+      context: .
+      shm_size: '4gb'
     command: bash -c "sleep 10 && entrypoint.sh"
     ports:
       - "7331:7331"
