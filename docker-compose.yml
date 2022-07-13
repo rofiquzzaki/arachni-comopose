@@ -5,6 +5,7 @@ services:
       context: .
       shm_size: '4gb'
     command: bash -c "sleep 10 && entrypoint.sh"
+    shm_size: 4gb
     ports:
       - "7331:7331"
       - "222:22"

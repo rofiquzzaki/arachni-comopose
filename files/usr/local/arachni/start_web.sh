@@ -58,4 +58,4 @@ export ARACHNI_WEBUI_LOGDIR="/usr/local/arachni/logs/webui"
 
 export HOME="$env_root/home/arachni"
 
-exec ruby $GEM_PATH/bin/rackup $env_root/arachni-ui-web/config.ru --host 0.0.0.0
+exec ruby $GEM_PATH/bin/rackup $env_root/arachni-ui-web/config.ru --host 0.0.0.0 
