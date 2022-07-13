@@ -2,7 +2,7 @@ FROM amd64/ubuntu:20.04
 
 MAINTAINER Jerry Cai
 
-ARG ARACHNI_VERSION=arachni-1.6.1-0.6.1
+ARG ARACHNI_VERSION=arachni-1.6.1.3-0.6.1.1
 ENV SERVER_ROOT_PASSWORD arachni
 ENV ARACHNI_USERNAME arachni
 ENV ARACHNI_PASSWORD password
@@ -42,7 +42,7 @@ RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 #COPY "$PWD"/${ARACHNI_VERSION}-linux-x86_64.tar.gz ${ARACHNI_VERSION}-linux-x86_64.tar.gz
-RUN wget https://github.com/Arachni/arachni/releases/download/v1.6.1/${ARACHNI_VERSION}-linux-x86_64.tar.gz && \
+RUN wget https://github.com/Arachni/arachni/releases/download/v1.6.1.3/${ARACHNI_VERSION}-linux-x86_64.tar.gz && \
     tar xzvf ${ARACHNI_VERSION}-linux-x86_64.tar.gz && \
     mv ${ARACHNI_VERSION}/ /usr/local/arachni && \
     rm -rf *.tar.gz
